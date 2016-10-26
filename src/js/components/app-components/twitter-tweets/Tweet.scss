@@ -1,0 +1,75 @@
+.comp-tweet {
+  background-color: #fff;
+  padding: 9px 12px;
+  margin: 100px auto;
+  max-width: 588px;
+
+  .tweet-content {
+    margin-left: 58px;
+
+    .tweet-header {
+      a {
+        color: $cl-regent-grey;
+        font-size: $ft-size-14;
+
+        .tweet-full-name {
+          color: $cl-outer-space;
+        }
+
+        img {
+          margin-left: -58px;
+          float: left;
+          margin-top: 3px;
+          border-radius: 5px;
+          width: 48px;
+        }
+      }
+
+      .tweet-time {
+        color: $cl-regent-grey;
+        font-size: $ft-size-13;
+      }
+    }
+
+    .tweet-body {
+      font-size: $ft-size-26;
+      p {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+
+        s {
+          text-decoration: none;
+        }
+
+        a {
+          color: $cl-bondi-blue;
+          display: inline;
+          
+          .invisible {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+
+        &.Emoji {
+          width: 16px;
+        }
+      }
+    }
+
+    .tweet-footer {
+      width: 100%;
+      height: 30px;
+    }
+  }
+}
+
+
+
+
+

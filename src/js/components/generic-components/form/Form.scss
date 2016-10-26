@@ -1,0 +1,31 @@
+.comp-form {
+  .error-message {
+    font-weight: bold;
+    color: red;
+  }
+
+  .success-message {
+    font-weight: bold;
+    color: green;
+  }
+
+  input {
+    margin-bottom: 0px;
+
+    &.error {
+      border: 1px solid red !important;
+    }
+  }
+
+  select {
+    margin-bottom: 0px;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}

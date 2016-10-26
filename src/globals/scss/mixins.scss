@@ -1,0 +1,13 @@
+$mobile-break-point: 767px;
+//$tablet-break-point: 1024px;
+$tablet-break-point: 1920px;
+
+@mixin responsive($device) {
+  @if $device == mobile {
+    @media (max-width: $mobile-break-point) { @content; }
+  }
+
+  @if $device == tablet {
+    @media (max-width: $tablet-break-point) { @content; }
+  }
+}

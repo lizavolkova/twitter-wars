@@ -1,0 +1,65 @@
+.container {
+  display:table;
+  width: 100%;
+  padding: 0;
+  //margin-top: -50px;
+  //padding: 50px 0 0 0; /*set left/right padding according to needs*/
+  box-sizing: border-box;
+
+  .row {
+    height: 100%;
+    display: table-row;
+    @include responsive(mobile) {
+      display: block;
+    }
+
+    .no-float {
+      display: table-cell;
+      float: none;
+      padding: 0;
+
+      @include responsive(mobile) {
+        display: block;
+      }
+    }
+
+    .col-left {
+      border-right: 2px solid #292f33;
+      background-color: #c01b33;
+    }
+    .col-right {
+      background: #142236;
+    }
+
+  }
+
+  .shuffle-button {
+    position: absolute;
+    top: 415px;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include responsive(tablet) {
+      top: 300px;
+    }
+
+    .white-button {
+      background-color: $cl-white;
+      border-bottom: 3px solid #142236;
+      padding: 30px 67px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #C0392B;
+      font-size: 34px;
+
+      @include responsive(tablet) {
+        padding: 16px 48px;
+        font-size: 30px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

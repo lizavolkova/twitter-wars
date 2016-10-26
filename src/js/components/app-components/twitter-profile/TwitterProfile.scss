@@ -1,0 +1,172 @@
+.tweet-profile-wrapper {
+  height: 280px;
+  position: relative;
+  @include responsive(mobile) {
+    height: 60px;
+  }
+
+  @include responsive(tablet) {
+    height: 200px;
+  }
+
+  .profile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-color: $cl-athens-grey;
+
+    img {
+      height: 100%;
+      filter:brightness(60%);
+    }
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+
+  .tweet-profile-user {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 218px;
+    font-size: $ft-size-40;
+    color: $cl-white;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(0,0,0,.8);
+  }
+
+  .tweet-profile-user-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: $cl-white;
+    top: 206px;
+    left: 229px;
+    position: absolute;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+
+    @include responsive(tablet) {
+      top: 152px;
+      left: 124px;
+      font-size: 26px;
+    }
+  }
+
+  .tweet-profile-white-bar {
+    height: 70px;
+    width: 100%;
+    background-color: $cl-wild-sand;
+    position: absolute;
+    margin-top: 280px;
+    padding-left: 197px;
+    padding-top: 22px;
+    font-size: 16px;
+
+    @include responsive(mobile) {
+      height: 60px;
+      margin-top: 0;
+      background-color: transparent;
+      padding-left: 100px;
+      padding-top: 12px;
+
+    }
+
+    @include responsive(tablet) {
+      margin-top: 200px;
+      font-size: 14px;
+      height: 50px;
+      padding-left: 103px;
+      padding-top: 14px;
+    }
+
+    .tweet-profile-user-name {
+      position: relative;
+      display: none;
+      top: auto;
+      left: auto;
+      font-size: 25px;
+
+      @include responsive(mobile) {
+        display: inline;
+        top: 3px;
+      }
+    }
+
+    .tweet-profile-divider-bar {
+
+      &.first {
+        color: $cl-white;
+        display: none;
+
+        @include responsive(mobile) {
+          display: inline;
+        }
+      }
+
+      &.second {
+        @include responsive(mobile) {
+          display: none;
+        }
+      }
+
+    }
+
+    .tweet-profile-screen-name {
+      color: $cl-pale-sky;
+      @include responsive(mobile) {
+        color: $cl-athens-grey;
+      }
+    }
+  }
+
+  .tweet-profile-content {
+    margin-top: 130px;
+    position: absolute;
+
+    @include responsive(mobile) {
+      margin-top: 11px;
+      margin-left: 20px;
+    }
+
+    .tweet-profile-avatar {
+      float: left;
+
+      img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 10px;
+        border: 2px solid $cl-white;
+        box-shadow: 1px 1px 4px $cl-black;
+        background-color: $cl-athens-grey;
+        z-index: 2;
+
+        &.tweet-profile-placeholder {
+          z-index: 1;
+          box-shadow: none;
+        }
+
+        @include responsive(mobile) {
+          width: 60px;
+          height: 60px;
+        }
+
+        @include responsive(tablet) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    .tweet-profile-body {
+      float: right;
+    }
+  }
+
+}

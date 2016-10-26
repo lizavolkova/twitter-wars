@@ -1,0 +1,18 @@
+.comp-form .error-message {
+  font-weight: bold;
+  color: red; }
+.comp-form .success-message {
+  font-weight: bold;
+  color: green; }
+.comp-form input {
+  margin-bottom: 0px; }
+  .comp-form input.error {
+    border: 1px solid red !important; }
+.comp-form select {
+  margin-bottom: 0px; }
+.comp-form .error-message {
+  color: red; }
+.comp-form button {
+  margin-top: 10px; }
+
+/*# sourceMappingURL=Form.css.map */

@@ -1,0 +1,8 @@
+html, body, .container {
+  height: 100%;
+  font-size: 16px; }
+  html #app, body #app, .container #app {
+    height: 100%;
+    min-height: 100%; }
+
+/*# sourceMappingURL=global.css.map */

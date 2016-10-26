@@ -1,0 +1,7 @@
+.image-fade {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .image-fade.loaded {
+    opacity: 1; }
+
+/*# sourceMappingURL=ImageFade.css.map */

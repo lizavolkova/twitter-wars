@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,YAAY;EAExB,kBAAS;IACP,OAAO,EAAE,CAAC",
+"sources": ["ImageFade.scss"],
+"names": [],
+"file": "ImageFade.css"
+}
