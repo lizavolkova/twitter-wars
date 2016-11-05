@@ -2,6 +2,10 @@
   height: 172px;
   position: relative;
 
+  @include  responsive(mobile-landscape) {
+    height: 130px;
+  }
+
   .profile-background {
     position: absolute;
     top: 0;
@@ -47,12 +51,11 @@
       top: 60px;
       left: 120px;
     }
-    //
-    //@include responsive(tablet) {
-    //  top: 152px;
-    //  left: 124px;
-    //  font-size: 26px;
-    //}
+
+    @include  responsive(mobile-landscape) {
+      top: 38px;
+      left: 107px;
+    }
   }
 
   .tweet-profile-white-bar {
@@ -70,7 +73,13 @@
       padding-left: 15px;
       padding-top: 15px;
       margin-top: 116px;
+    }
 
+    @include  responsive(mobile-landscape) {
+      margin-top: 80px;
+      font-size: 14px;
+      padding-left: 14px;
+      height: 45px;
     }
 
     .tweet-profile-user-name {
@@ -111,6 +120,10 @@
     margin-top: 25px;
     position: absolute;
 
+    @include  responsive(mobile-landscape) {
+      margin-top: 7px;
+    }
+
     .tweet-profile-avatar {
       float: left;
 
@@ -133,6 +146,11 @@
         @include responsive(mobile) {
           width: 100px;
           height: 100px;
+        }
+
+        @include  responsive(mobile-landscape) {
+          width: 80px;
+          height: 80px;
         }
       }
     }

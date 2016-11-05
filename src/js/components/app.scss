@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 
+  @include  responsive(mobile-landscape) {
+    min-height: 1000px;
+  }
+
   .row {
     height: 100%;
     display: table-row;
@@ -35,6 +39,10 @@
       top: 247px;
     }
 
+    @include  responsive(mobile-landscape) {
+      top: 157px;
+    }
+
     .white-button {
       background-color: $cl-white;
       border-bottom: 3px solid #142236;
@@ -60,5 +68,9 @@
     bottom: 100px;
     left: 50%;
     transform: translate(-50%);
+
+    @include  responsive(mobile-landscape) {
+      bottom: 5px;
+    }
   }
 }

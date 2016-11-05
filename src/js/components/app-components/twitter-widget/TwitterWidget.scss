@@ -10,6 +10,10 @@
     opacity: 1;
   }
 
+  @include  responsive(mobile-landscape) {
+    margin-top: -27px;
+  }
+
   &.fadeOut {
     opacity: 0;
     @include responsive(mobile) {
