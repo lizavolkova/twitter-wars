@@ -1,6 +1,4 @@
 import React from 'react';
-import Nav from './components/generic-components/nav/Nav.container.jsx'
-import Footer from './components/generic-components/footer/Footer.container.jsx'
 import Main from './components/generic-components/main/Main.container.jsx'
 import User from './components/app-components/user/User.container.jsx'
 import base64 from 'base-64'
