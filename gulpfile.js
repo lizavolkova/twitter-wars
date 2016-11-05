@@ -16,7 +16,7 @@ var notify = require('gulp-notify');
 var exec = require('child_process').exec;
 
 gulp.task('default', ['sass', 'webpack-dev-server', 'watch']);
-gulp.task('build', ['html', 'sass', 'webpack']);
+gulp.task('build', ['sass', 'webpack']);
 
 gulp.task('sass', function () {
     return gulp.src([
@@ -78,8 +78,8 @@ gulp.task('webpack', function() {
     var myConfig = Object.create(webpackConfig);
     myConfig.devtool = 'eval';
     myConfig.debug = false;
-    myConfig.output.path = __dirname + '/dist/';
-    myConfig.output.publicPath = '/dist/';
+    // myConfig.output.path = __dirname + '/dist/';
+    // myConfig.output.publicPath = '/dist/';
 
     webpack((myConfig), function(err, stats) {
         if(err) throw new gutil.PluginError("webpack", err);
