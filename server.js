@@ -23,7 +23,7 @@ var client = new Twitter({
     access_token_secret: 'ejoBErtgCSsmEhiPKO83ROi6MMkp0rBdyeCRElxzcVQlr'
 });
 
-app.use(express.static(__dirname ));
+app.use(express.static(__dirname));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
@@ -179,5 +179,6 @@ app.get('/getProfileData/:user', function(req, res) {
  * Start regular server
  */
 app.listen(process.env.PORT || 3000, function(){
+    console.log(__dirname);
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });

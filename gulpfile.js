@@ -78,8 +78,6 @@ gulp.task('webpack', function() {
     var myConfig = Object.create(webpackConfig);
     myConfig.devtool = 'eval';
     myConfig.debug = false;
-    // myConfig.output.path = __dirname + '/dist/';
-    // myConfig.output.publicPath = '/dist/';
     myConfig.externals = {
         'config': JSON.stringify(require('./src/globals/config/config.prod.json'))
     };
