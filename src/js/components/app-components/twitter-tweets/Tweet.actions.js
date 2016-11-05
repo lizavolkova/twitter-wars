@@ -35,13 +35,6 @@ export function getTweets(props) {
     }
 }
 
-
-
-
-
-
-
-
 export function getTweetById(props) {
     // var url = config.serverUrL + '/getTweetById/realDonaldTrump/671809255561932806'
     var url = config.serverUrL  + '/testURL';

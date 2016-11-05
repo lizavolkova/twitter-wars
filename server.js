@@ -98,7 +98,12 @@ var findRandomTweet = function(html, userName, sinceDate) {
             i++;
         }
 
-        tweet_id = $tweet.attr('data-item-id');
+        if ($tweet) {
+            tweet_id = $tweet.attr('data-item-id');
+        } else {
+            tweet_id = 'error';
+        }
+
 
     });
 
@@ -123,7 +128,15 @@ app.get('/getTweet', function(req, res) {
             return404(res, error);
         } else {
             var tweet_id = findRandomTweet(html, userName, sinceDate);
-            fetchTweetById(tweet_id, res);
+            if (tweet_id === 'error') {
+                error = {
+                    error: 'true'
+                }
+                return404(res, error);
+            } else {
+                fetchTweetById(tweet_id, res);
+            }
+
         }
     })
 });

@@ -46,7 +46,15 @@ export default class App extends React.Component {
         sinceDate.setDate(sinceDate.getDate() - 1)
         this.setState({
             sinceDate: sinceDate.toISOString().slice(0,10),
-            untilDate: untilDate.toISOString().slice(0,10)
+            untilDate: untilDate.toISOString().slice(0,10),
+            userLeft: {
+                userName: 'realDonaldTrump',
+                tweet_id: ''
+            },
+            userRight: {
+                userName: 'HillaryClinton',
+                tweet_id: ''
+            }
         })
     }
 
@@ -131,3 +139,11 @@ export default class App extends React.Component {
 
     }
 }
+
+
+
+
+
+
+
+
