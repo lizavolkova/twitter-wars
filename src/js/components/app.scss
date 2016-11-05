@@ -36,7 +36,7 @@
     transform: translate(-50%);
 
     @include responsive(mobile) {
-      top: 247px;
+      top: 208px;
     }
 
     @include  responsive(mobile-landscape) {
@@ -50,17 +50,17 @@
       text-transform: uppercase;
       font-weight: bold;
       color: #C0392B;
-      font-size: 34px;
+      font-size: 26px;
 
       span {
         padding: 0 11px;
       }
 
       .fa {
-        font-size: 17px;
+        font-size: 16px;
         color: $cl-big-stone;
         vertical-align: top;
-        margin-top: 17px;
+        margin-top: 10px;
 
         @include responsive(mobile) {
           font-size: 14px;
@@ -77,6 +77,25 @@
       &:hover {
         text-decoration: none;
       }
+    }
+  }
+
+  .date-range {
+    position: absolute;
+    top: 352px;
+    left: 50%;
+    transform: translate(-50%);
+    color: $cl-white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+    @include responsive(mobile) {
+      top: 257px;
+    }
+
+    @include  responsive(mobile-landscape) {
+      top: 203px;
     }
   }
 

@@ -74,7 +74,12 @@ class TwitterWidget extends React.Component {
 
         var widgetLoaderClass = classNames({
             'twitter-widget-loader-container': true,
-            'hide': !this.state.fetching
+            'hide': !this.state.fetching || this.props.tweet.error
+        })
+
+        var widgetErrorClass = classNames({
+            'twitter-error-container': true,
+            'hide': !this.props.tweet.error || !this.props.tweet.fetched
         })
 
         var widgetContentClass = classNames({
@@ -82,14 +87,30 @@ class TwitterWidget extends React.Component {
             'hide': this.state.fetching
         })
 
+        console.log(this)
+
       return (
 
           <div className={compWidgetClass}  >
               <div className={widgetLoaderClass}>
                   <div className="twitter-widget-loader">
-                      <i className="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+                      <div className="spinner">
+                          <div className="rect1"></div>
+                          <div className="rect2"></div>
+                          <div className="rect3"></div>
+                          <div className="rect4"></div>
+                          <div className="rect5"></div>
+                      </div>
                       <span className="sr-only">Loading...</span>
                   </div>
+              </div>
+
+              <div className={widgetErrorClass}>
+                  <div className="twitter-error">
+                      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                      An error occurred, please try shuffling again
+                  </div>
+
               </div>
 
               <div ref="widgetWrapper" className={widgetContentClass} dangerouslySetInnerHTML={{__html: this.props.tweet.html}}></div>
@@ -100,15 +121,6 @@ class TwitterWidget extends React.Component {
 }
 
 export default TwitterWidget;
-
-
-
-
-
-
-
-
-
 
 
 

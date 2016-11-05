@@ -3,7 +3,7 @@ import Main from './components/generic-components/main/Main.container.jsx'
 import User from './components/app-components/user/User.container.jsx'
 import Footer from './components/generic-components/footer/Footer.container.jsx'
 import base64 from 'base-64'
-
+import moment from 'moment'
 //import FormInput from './components/generic-components/form/FormInput.jsx';
 
 export default class App extends React.Component {
@@ -14,9 +14,9 @@ export default class App extends React.Component {
         this.state = {
             // sinceDate: '2014-10-15',
             // untilDate: '2016-10-16'
-            permalink: 'https://localhost:8080/index.html?link=NjY3MDIzOTU3MzY3OTE0NDk2JjY2NjYzNjQyMzgxOTIwMjU2MA==',
-            sinceDate: '2015-11-17',
-            untilDate: '2015-11-19',
+            permalink: '',
+            sinceDate: '',
+            untilDate: '',
             userLeft: {
                 userName: 'realDonaldTrump',
                 tweet_id: tweetIds[0]
@@ -104,7 +104,7 @@ export default class App extends React.Component {
     }
 
     render() {
-        console.log('APP.JS RENDERING!')
+        var searchDate = moment(this.state.sinceDate).format("dddd, MMMM Do YYYY")
         return (
                 <Main>
                     <div className="row">
@@ -127,13 +127,15 @@ export default class App extends React.Component {
                     </div>
 
                     <div className="shuffle-button">
-
                         <a href="#" className="white-button" onClick={this.onShuffle.bind(this)}>
                             <i className="fa fa-star" ></i>
                             <span>Shuffle</span>
                             <i className="fa fa-star" ></i>
                         </a>
+                    </div>
 
+                    <div className="date-range">
+                        {searchDate}
                     </div>
 
                     <Footer permalink={this.state.permalink} />
@@ -143,3 +145,21 @@ export default class App extends React.Component {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

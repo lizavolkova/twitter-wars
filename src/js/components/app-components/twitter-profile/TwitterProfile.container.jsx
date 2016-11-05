@@ -41,16 +41,9 @@ class TwitterProfile extends React.Component {
 
         const displayName = this.props.user.fetching || this.props.user.error ? '@' + this.props.user.userName : this.props.user.name
 
+        const twitterProfileUrl = 'https://twitter.com/' + this.props.user.userName
         return (
             <div className="tweet-profile-container">
-
-                {/*<div className={fetchingDivClass}>*/}
-                    {/*Fetching data...*/}
-                {/*</div>*/}
-
-                {/*<div className={errorDivClass}>*/}
-                    {/*There was an error*/}
-                {/*</div>*/}
 
                 <div className="tweet-profile-wrapper">
                     <div className="profile-background">
@@ -68,9 +61,9 @@ class TwitterProfile extends React.Component {
                         <span className="tweet-profile-divider-bar first">
                             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                         </span>
-                        <span className="tweet-profile-screen-name">
-                            @{this.props.user.userName}
-                        </span>
+                            <a className="tweet-profile-screen-name" href={twitterProfileUrl} target="_blank">
+                                @{this.props.user.userName}
+                            </a>
                         <span className="tweet-profile-divider-bar second">
                             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                         </span>

@@ -33,7 +33,7 @@ html, body, .container {
     transform: translate(-50%); }
     @media (max-width: 769px) {
       .container .shuffle-button {
-        top: 247px; } }
+        top: 208px; } }
     @media (max-width: 769px) and (orientation: landscape) {
       .container .shuffle-button {
         top: 157px; } }
@@ -44,14 +44,14 @@ html, body, .container {
       text-transform: uppercase;
       font-weight: bold;
       color: #C0392B;
-      font-size: 34px; }
+      font-size: 26px; }
       .container .shuffle-button .white-button span {
         padding: 0 11px; }
       .container .shuffle-button .white-button .fa {
-        font-size: 17px;
+        font-size: 16px;
         color: #142236;
         vertical-align: top;
-        margin-top: 17px; }
+        margin-top: 10px; }
         @media (max-width: 769px) {
           .container .shuffle-button .white-button .fa {
             font-size: 14px;
@@ -62,6 +62,21 @@ html, body, .container {
           font-size: 25px; } }
       .container .shuffle-button .white-button:hover {
         text-decoration: none; }
+  .container .date-range {
+    position: absolute;
+    top: 352px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold; }
+    @media (max-width: 769px) {
+      .container .date-range {
+        top: 257px; } }
+    @media (max-width: 769px) and (orientation: landscape) {
+      .container .date-range {
+        top: 203px; } }
   .container .permalink {
     position: absolute;
     bottom: 100px;
@@ -149,6 +164,8 @@ html, body, .container {
       display: none; }
     .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name {
       color: #66757f; }
+      .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name:hover {
+        text-decoration: none; }
   .tweet-profile-wrapper .tweet-profile-content {
     margin-top: 25px;
     position: absolute; }
@@ -225,18 +242,18 @@ html, body, .container {
       height: 30px; }
 
 .comp-twitter-widget {
-  margin-top: 192px;
+  margin-top: 220px;
   position: relative;
   transition: opacity 1s;
   opacity: 0; }
   @media (max-width: 769px) {
     .comp-twitter-widget {
-      margin-top: 87px;
+      margin-top: 10px;
       min-height: 250px;
       opacity: 1; } }
   @media (max-width: 769px) and (orientation: landscape) {
     .comp-twitter-widget {
-      margin-top: -27px; } }
+      margin-top: -8px; } }
   .comp-twitter-widget.fadeOut {
     opacity: 0; }
     @media (max-width: 769px) {
@@ -259,6 +276,55 @@ html, body, .container {
       width: 77px;
       height: 77px;
       color: #ffffff; }
+      .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner {
+        margin: 100px auto;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 10px; }
+        .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner div {
+          background-color: #ffffff;
+          height: 100%;
+          width: 6px;
+          display: inline-block;
+          margin: 0 3px 0 0;
+          animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+        .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner .rect2 {
+          animation-delay: -1.1s; }
+        .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner .rect3 {
+          animation-delay: -1.0s; }
+        .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner .rect4 {
+          animation-delay: -0.9s; }
+        .comp-twitter-widget .twitter-widget-loader-container .twitter-widget-loader .spinner .rect5 {
+          animation-delay: -0.8s; }
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
+  .comp-twitter-widget .twitter-error-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    position: relative; }
+    .comp-twitter-widget .twitter-error-container .twitter-error {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 50%;
+      height: 82px;
+      color: #ffffff;
+      text-align: center; }
+      .comp-twitter-widget .twitter-error-container .twitter-error .fa {
+        display: block;
+        font-size: 26px;
+        padding: 10px; }
   .comp-twitter-widget .twitter-widget-wrapper {
     margin: 100px auto;
     max-width: 500px;
@@ -285,12 +351,6 @@ html, body, .container {
     display: table-row;
     padding-right: 50px; }
 
-.image-fade {
-  opacity: 0;
-  transition: opacity 0.3s; }
-  .image-fade.loaded {
-    opacity: 1; }
-
 .comp-form .error-message {
   font-weight: bold;
   color: red; }
@@ -312,6 +372,12 @@ html, body, .container {
 
 .comp-form button {
   margin-top: 10px; }
+
+.image-fade {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .image-fade.loaded {
+    opacity: 1; }
 
 .comp-social {
   display: table-cell;

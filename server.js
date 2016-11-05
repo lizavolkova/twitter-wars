@@ -14,6 +14,8 @@ var https = require('https');
 //    console.log('redis connected!');
 // });
 
+var NodeCache = require( "node-cache" );
+var myCache = new NodeCache( { stdTTL: 0, checkPeriod: 86400});
 
 //Configure Twitter
 var Twitter = require('twitter');
@@ -86,6 +88,7 @@ var findRandomTweet = function(html, userName, sinceDate) {
         var text = '';
 
         while ( text === null ||  ((text !== null && text.length === 0) && (!queryDate.isSame(tweetDate, 'day')) && i < numberOfTweets ) ) {
+            console.log('looking for random tweet..');
             randomTweet = Math.floor(Math.random() * numberOfTweets) + 1;
             $tweet = data.find('#stream-items-id').children().eq(randomTweet)
 
@@ -104,9 +107,9 @@ var findRandomTweet = function(html, userName, sinceDate) {
             tweet_id = 'error';
         }
 
-
     });
 
+    console.log('tweet found!');
     return tweet_id;
 }
 
@@ -118,11 +121,8 @@ app.get('/getTweet', function(req, res) {
     var userName = req.query.userName;
     var sinceDate = req.query.sinceDate;
     var untilDate = req.query.untilDate;
+    var url = 'https://twitter.com/search?q=from%3A' + userName + '+since%3A' + sinceDate + '+until%3A' + untilDate;
 
-   var url = 'https://twitter.com/search?q=from%3A' + userName + '+since%3A' + sinceDate + '+until%3A' + untilDate;
-
-
-    // var url = 'https://twitter.com/search?q=from%3ArealDonaldTrump+since%3A2016-09-07+until%3A2016-09-08';
     request(url, function(error, response, html) {
         if (error) {
             return404(res, error);
@@ -153,16 +153,23 @@ app.get('/getTweetById/:id', function(req, res) {
  * @param res
  */
 var fetchTweetById = function(tweet_id, res) {
-    var url = 'https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F' + tweet_id;
-    console.log(url)
-    request(url, function(error, response, html) {
-        if (!error) {
-            res.send(response.body);
-        } else {
-            return404(response, error);
-        }
-    })
-}
+    console.log('now fetching tweet data by id');
+    var cachedTweet = myCache.get(tweet_id);
+    if (cachedTweet) {
+        res.send(cachedTweet);
+    } else {
+        var url = 'https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F' + tweet_id;
+        console.log(url)
+        request(url, function(error, response, html) {
+            if (!error) {
+                res.send(response.body);
+                myCache.set(tweet_id, response.body);
+            } else {
+                return404(response, error);
+            }
+        })
+    }
+};
 
 /**
  * Get users's profile data
@@ -171,15 +178,29 @@ app.get('/getProfileData/:user', function(req, res) {
     var getProfileRequest = {
         screen_name: req.params.user
     }
-    client.get('users/show', getProfileRequest, function(error, tweets, response) {
-        if (error) {
-            return404(res, error);
-        } else {
-            res.send(tweets);
-            // return404(res, error);
-        }
-    });
-})
+
+    var homePageUrlDisplay = undefined;
+    var cachedProfileData = myCache.get(req.params.user);
+
+    if (cachedProfileData) {
+        console.log('SENDING CACHED PROFILE!');
+        res.send(cachedProfileData);
+    } else {
+        //while (!homePageUrlDisplay || homePageUrlDisplay === undefined) {
+            //homePageUrlDisplay = 'url';
+            client.get('users/show', getProfileRequest, function(error, tweets) {
+                if (error) {
+                    return404(res, error);
+                } else {
+                    console.log('DATA FETCHED SENDING RESPONSE!!');
+                    //homePageUrlDisplay = tweets.entities.url.urls[0].display_url;
+                    res.send(tweets);
+                    myCache.set(req.params.user, tweets);
+                }
+            });
+       // }
+    }
+});
 
 /**
  * Start HTTPS server

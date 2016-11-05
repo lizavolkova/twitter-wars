@@ -53,11 +53,11 @@ class Social extends React.Component {
     }
 
     facebookShare() {
-        window.open(this.props.urlTest , 'Share on Facebook','width=560,height=636');
+        window.open(this.props.url , 'Share on Facebook','width=560,height=636');
     }
 
     twitterShare() {
-        window.open(this.props.urlTest , 'Share on Twitter','width=670,height=430');
+        window.open(this.props.url , 'Share on Twitter','width=670,height=430');
     }
 
     copyLink() {
