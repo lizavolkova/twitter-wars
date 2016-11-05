@@ -184,6 +184,28 @@ html, body, .container {
       width: 100%;
       height: 30px; }
 
+.comp-form .error-message {
+  font-weight: bold;
+  color: red; }
+
+.comp-form .success-message {
+  font-weight: bold;
+  color: green; }
+
+.comp-form input {
+  margin-bottom: 0px; }
+  .comp-form input.error {
+    border: 1px solid red !important; }
+
+.comp-form select {
+  margin-bottom: 0px; }
+
+.comp-form .error-message {
+  color: red; }
+
+.comp-form button {
+  margin-top: 10px; }
+
 .comp-twitter-widget {
   margin-top: 192px;
   position: relative;
@@ -228,28 +250,6 @@ html, body, .container {
         position: absolute;
         left: 50%;
         transform: translate(-50%); } }
-
-.comp-form .error-message {
-  font-weight: bold;
-  color: red; }
-
-.comp-form .success-message {
-  font-weight: bold;
-  color: green; }
-
-.comp-form input {
-  margin-bottom: 0px; }
-  .comp-form input.error {
-    border: 1px solid red !important; }
-
-.comp-form select {
-  margin-bottom: 0px; }
-
-.comp-form .error-message {
-  color: red; }
-
-.comp-form button {
-  margin-top: 10px; }
 
 .image-fade {
   opacity: 0;

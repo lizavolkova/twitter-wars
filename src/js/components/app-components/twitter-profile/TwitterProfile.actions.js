@@ -1,4 +1,5 @@
 var config = require('config')
+import 'whatwg-fetch'
 
 export function getProfileData(userName) {
     return function(dispatch) {

@@ -1,4 +1,5 @@
 var config = require('config')
+import 'whatwg-fetch';
 
 export function getTweets(props) {
     console.log('fetching tweets')
