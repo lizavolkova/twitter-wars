@@ -81,9 +81,9 @@ gulp.task('webpack', function() {
     // myConfig.output.path = __dirname + "/dist/";
     // myConfig.output.publicPath = "/dist/";
     // myConfig.output.filename = __dirname + "/dist/";
-    myConfig.externals = {
-        'config': JSON.stringify(require('./src/globals/config/config.prod.json'))
-    };
+    // myConfig.externals = {
+    //     'config': JSON.stringify(require('./src/globals/config/config.prod.json'))
+    // };
 
     webpack((myConfig), function(err, stats) {
         if(err) throw new gutil.PluginError("webpack", err);
