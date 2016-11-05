@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>React Tutorials</title>
-    <script src="https://jsconsole.com/js/remote.js?17bd9ee3-9dad-43e1-9f47-32cc1282311f"></script>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <!-- change this up! http://www.bootstrapcdn.com/bootswatch/ -->
     <meta name="viewport" content="width=1024">
@@ -33,7 +32,9 @@
 
               return t;
     }(document, "script", "twitter-wjs"));
-
+    window.onerror = function(error) {
+      alert(error);
+    };
     </script>
 
     <link rel="stylesheet" href="styles.css">
