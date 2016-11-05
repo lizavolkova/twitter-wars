@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -23,7 +24,10 @@ var client = new Twitter({
     access_token_secret: 'ejoBErtgCSsmEhiPKO83ROi6MMkp0rBdyeCRElxzcVQlr'
 });
 
-app.use(express.static(__dirname));
+var indexPath = path.join(__dirname, '/src/index.html');
+app.get('/', function (_, res) { res.sendFile(indexPath) });
+
+app.use(express.static(path.join(__dirname, '/src')));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 

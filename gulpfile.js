@@ -16,7 +16,7 @@ var notify = require('gulp-notify');
 var exec = require('child_process').exec;
 
 gulp.task('default', ['sass', 'webpack-dev-server', 'watch']);
-gulp.task('build', ['sass', 'webpack']);
+gulp.task('build', ['sass', 'html', 'webpack']);
 
 gulp.task('sass', function () {
     return gulp.src([
@@ -32,9 +32,9 @@ gulp.task('sass', function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/'))
-        //.pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./dist/'))
         .pipe(livereload())
 });
 
@@ -76,8 +76,11 @@ gulp.task('html', function() {
 
 gulp.task('webpack', function() {
     var myConfig = Object.create(webpackConfig);
-    myConfig.devtool = 'eval';
-    myConfig.debug = false;
+    // myConfig.devtool = 'eval';
+    // myConfig.debug = false;
+    // myConfig.output.path = __dirname + "/dist/";
+    // myConfig.output.publicPath = "/dist/";
+    // myConfig.output.filename = __dirname + "/dist/";
     myConfig.externals = {
         'config': JSON.stringify(require('./src/globals/config/config.prod.json'))
     };
