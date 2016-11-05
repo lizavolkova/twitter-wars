@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './components/generic-components/main/Main.container.jsx'
 import User from './components/app-components/user/User.container.jsx'
+import Footer from './components/generic-components/footer/Footer.container.jsx'
 import base64 from 'base-64'
 
 //import FormInput from './components/generic-components/form/FormInput.jsx';
@@ -126,24 +127,19 @@ export default class App extends React.Component {
                     </div>
 
                     <div className="shuffle-button">
-                        <a href="#" className="white-button" onClick={this.onShuffle.bind(this)}>Shuffle</a>
-                        <a href={this.state.permalink}></a>
-                    </div>
-                    <div className="permalink">
 
-                        <a href={this.state.permalink}>PERMALINK!</a>
+                        <a href="#" className="white-button" onClick={this.onShuffle.bind(this)}>
+                            <i className="fa fa-star" ></i>
+                            <span>Shuffle</span>
+                            <i className="fa fa-star" ></i>
+                        </a>
+
                     </div>
+
+                    <Footer permalink={this.state.permalink} />
                 </Main>
 
         )
 
     }
 }
-
-
-
-
-
-
-
-

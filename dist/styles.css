@@ -40,15 +40,26 @@ html, body, .container {
     .container .shuffle-button .white-button {
       background-color: #ffffff;
       border-bottom: 3px solid #142236;
-      padding: 30px 67px;
+      padding: 22px 45px;
       text-transform: uppercase;
       font-weight: bold;
       color: #C0392B;
       font-size: 34px; }
+      .container .shuffle-button .white-button span {
+        padding: 0 11px; }
+      .container .shuffle-button .white-button .fa {
+        font-size: 17px;
+        color: #142236;
+        vertical-align: top;
+        margin-top: 17px; }
+        @media (max-width: 769px) {
+          .container .shuffle-button .white-button .fa {
+            font-size: 14px;
+            margin-top: 12px; } }
       @media (max-width: 769px) {
         .container .shuffle-button .white-button {
-          padding: 16px 48px;
-          font-size: 30px; } }
+          padding: 16px 35px;
+          font-size: 25px; } }
       .container .shuffle-button .white-button:hover {
         text-decoration: none; }
   .container .permalink {
@@ -59,77 +70,6 @@ html, body, .container {
     @media (max-width: 769px) and (orientation: landscape) {
       .container .permalink {
         bottom: 5px; } }
-
-.comp-form .error-message {
-  font-weight: bold;
-  color: red; }
-
-.comp-form .success-message {
-  font-weight: bold;
-  color: green; }
-
-.comp-form input {
-  margin-bottom: 0px; }
-  .comp-form input.error {
-    border: 1px solid red !important; }
-
-.comp-form select {
-  margin-bottom: 0px; }
-
-.comp-form .error-message {
-  color: red; }
-
-.comp-form button {
-  margin-top: 10px; }
-
-.image-fade {
-  opacity: 0;
-  transition: opacity 0.3s; }
-  .image-fade.loaded {
-    opacity: 1; }
-
-.comp-tweet {
-  background-color: #fff;
-  padding: 9px 12px;
-  margin: 100px auto;
-  max-width: 588px; }
-  .comp-tweet .tweet-content {
-    margin-left: 58px; }
-    .comp-tweet .tweet-content .tweet-header a {
-      color: #8899a6;
-      font-size: 0.875rem; }
-      .comp-tweet .tweet-content .tweet-header a .tweet-full-name {
-        color: #292f33; }
-      .comp-tweet .tweet-content .tweet-header a img {
-        margin-left: -58px;
-        float: left;
-        margin-top: 3px;
-        border-radius: 5px;
-        width: 48px; }
-    .comp-tweet .tweet-content .tweet-header .tweet-time {
-      color: #8899a6;
-      font-size: 0.8125rem; }
-    .comp-tweet .tweet-content .tweet-body {
-      font-size: 1.625rem; }
-      .comp-tweet .tweet-content .tweet-body p {
-        white-space: pre-wrap;
-        word-wrap: break-word; }
-        .comp-tweet .tweet-content .tweet-body p s {
-          text-decoration: none; }
-        .comp-tweet .tweet-content .tweet-body p a {
-          color: #0084B4;
-          display: inline; }
-          .comp-tweet .tweet-content .tweet-body p a .invisible {
-            display: none; }
-      .comp-tweet .tweet-content .tweet-body img {
-        border-radius: 5px;
-        width: 100%;
-        height: auto; }
-        .comp-tweet .tweet-content .tweet-body img.Emoji {
-          width: 16px; }
-    .comp-tweet .tweet-content .tweet-footer {
-      width: 100%;
-      height: 30px; }
 
 .tweet-profile-wrapper {
   height: 172px;
@@ -241,6 +181,49 @@ html, body, .container {
     .tweet-profile-wrapper .tweet-profile-content .tweet-profile-body {
       float: right; }
 
+.comp-tweet {
+  background-color: #fff;
+  padding: 9px 12px;
+  margin: 100px auto;
+  max-width: 588px; }
+  .comp-tweet .tweet-content {
+    margin-left: 58px; }
+    .comp-tweet .tweet-content .tweet-header a {
+      color: #8899a6;
+      font-size: 0.875rem; }
+      .comp-tweet .tweet-content .tweet-header a .tweet-full-name {
+        color: #292f33; }
+      .comp-tweet .tweet-content .tweet-header a img {
+        margin-left: -58px;
+        float: left;
+        margin-top: 3px;
+        border-radius: 5px;
+        width: 48px; }
+    .comp-tweet .tweet-content .tweet-header .tweet-time {
+      color: #8899a6;
+      font-size: 0.8125rem; }
+    .comp-tweet .tweet-content .tweet-body {
+      font-size: 1.625rem; }
+      .comp-tweet .tweet-content .tweet-body p {
+        white-space: pre-wrap;
+        word-wrap: break-word; }
+        .comp-tweet .tweet-content .tweet-body p s {
+          text-decoration: none; }
+        .comp-tweet .tweet-content .tweet-body p a {
+          color: #0084B4;
+          display: inline; }
+          .comp-tweet .tweet-content .tweet-body p a .invisible {
+            display: none; }
+      .comp-tweet .tweet-content .tweet-body img {
+        border-radius: 5px;
+        width: 100%;
+        height: auto; }
+        .comp-tweet .tweet-content .tweet-body img.Emoji {
+          width: 16px; }
+    .comp-tweet .tweet-content .tweet-footer {
+      width: 100%;
+      height: 30px; }
+
 .comp-twitter-widget {
   margin-top: 192px;
   position: relative;
@@ -288,3 +271,79 @@ html, body, .container {
         position: absolute;
         left: 50%;
         transform: translate(-50%); } }
+
+.comp-footer {
+  position: fixed;
+  height: 40px;
+  background-color: #edeef1;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #66757f;
+  display: table; }
+  .comp-footer .social-links {
+    float: right;
+    display: table-row;
+    padding-right: 50px; }
+
+.image-fade {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .image-fade.loaded {
+    opacity: 1; }
+
+.comp-form .error-message {
+  font-weight: bold;
+  color: red; }
+
+.comp-form .success-message {
+  font-weight: bold;
+  color: green; }
+
+.comp-form input {
+  margin-bottom: 0px; }
+  .comp-form input.error {
+    border: 1px solid red !important; }
+
+.comp-form select {
+  margin-bottom: 0px; }
+
+.comp-form .error-message {
+  color: red; }
+
+.comp-form button {
+  margin-top: 10px; }
+
+.comp-social {
+  display: table-cell;
+  cursor: pointer;
+  position: relative; }
+  .comp-social .fa {
+    padding: 5px 20px;
+    margin-top: 7px; }
+  .comp-social .social-tooltip {
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 30px;
+    left: -6px;
+    background-color: #ffffff;
+    padding: 7px 14px;
+    transition: all .07s linear; }
+    .comp-social .social-tooltip:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #ffffff;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%); }
+    .comp-social .social-tooltip.show {
+      visibility: visible;
+      opacity: 1;
+      bottom: 45px; }

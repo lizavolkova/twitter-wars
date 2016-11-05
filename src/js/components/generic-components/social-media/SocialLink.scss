@@ -1,0 +1,44 @@
+.comp-social {
+  display: table-cell;
+  cursor: pointer;
+  position: relative;
+
+  .fa {
+    padding: 5px 20px;
+    margin-top: 7px;
+  }
+
+  .social-tooltip {
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 30px;
+    left: -6px;
+    background-color: $cl-white;
+    padding: 7px 14px;
+    transition: all .07s linear;
+
+    &:before {
+      content:'';
+      display:block;
+      width:0;
+      height:0;
+      position:absolute;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid $cl-white;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      bottom: 45px;
+    }
+  }
+
+}

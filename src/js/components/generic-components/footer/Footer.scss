@@ -1,0 +1,15 @@
+.comp-footer {
+  position: fixed;
+  height: 40px;
+  background-color: $cl-athens-grey;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid $cl-pale-sky;
+  display: table;
+
+  .social-links {
+    float: right;
+    display: table-row;
+    padding-right: 50px;
+  }
+}
