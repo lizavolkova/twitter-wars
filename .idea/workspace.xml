@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="406a0154-f759-4980-9ea5-7a2f8e6a8d5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles.css" afterPath="$PROJECT_DIR$/dist/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/App.js" afterPath="$PROJECT_DIR$/src/js/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.container.jsx" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.css" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.scss" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app.scss" afterPath="$PROJECT_DIR$/src/js/components/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.container.jsx" afterPath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/store.js" afterPath="$PROJECT_DIR$/src/js/store.js" />
     </list>
     <ignored path="react-test-webpage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterWidget.container.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TwitterWidget.container.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
@@ -87,6 +75,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
               <caret line="140" column="6" selection-start-line="125" selection-start-column="4" selection-end-line="140" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -150,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.scss" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.container.jsx" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.reducer.js" />
@@ -163,6 +160,7 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/js/App.js" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -543,12 +541,12 @@
       <workItem from="1475190316913" duration="78824000" />
       <workItem from="1476506686234" duration="6522000" />
       <workItem from="1476653854370" duration="99688000" />
-      <workItem from="1477018847671" duration="124948000" />
+      <workItem from="1477018847671" duration="125156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314116000" />
+    <option name="totallyTimeSpent" value="314324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2891" y="-11" width="2326" height="1318" extended-state="6" />
@@ -896,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
@@ -1026,6 +1016,14 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
+          <folding />
         </state>
       </provider>
     </entry>
