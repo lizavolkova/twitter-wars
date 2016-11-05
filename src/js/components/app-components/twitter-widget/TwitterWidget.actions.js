@@ -1,3 +1,5 @@
+var config = require('config')
+
 export function createTweet(userName) {
     return {
         type: 'TWEET_DATA_CREATE',
@@ -10,12 +12,12 @@ export function getTweet(props) {
     var url;
 
     if (props.tweet_id) {
-        url = 'https://localhost:3000/getTweetById/' + props.tweet_id
+        url = config.serverUrL + '/getTweetById/' + props.tweet_id
     } else {
-        url = 'https://localhost:3000/getTweet?userName=' + props.userName +'&sinceDate=' + props.sinceDate + '&untilDate=' + props.untilDate
+        url = config.serverUrL + '/getTweet?userName=' + props.userName +'&sinceDate=' + props.sinceDate + '&untilDate=' + props.untilDate
     }
 
-    // var url = 'https://localhost:3000/getTweets?userName=' + props.userName + '&sinceDate=2016-09-26&untilDate=2016-09-28'
+    // var url = config.serverUrL + '/getTweets?userName=' + props.userName + '&sinceDate=2016-09-26&untilDate=2016-09-28'
 
     return function(dispatch) {
         dispatch(tweetsFetching(userName))
@@ -42,7 +44,7 @@ export function getTweet(props) {
 }
 
 export function getTweetById(id) {
-    var url = 'https://localhost:3000/getTweetById/' + id
+    var url = config.serverUrL + '/getTweetById/' + id
 
     return function(dispatch) {
         dispatch(tweetsFetching(userName))
@@ -83,6 +85,7 @@ export function tweetFetched(data) {
 
 
 export function tweetFetchError(userName) {
+    console.log('TWEET ERROR!!')
     return {
         type: 'TWEET_DATA_FETCH_ERROR',
         payload: userName

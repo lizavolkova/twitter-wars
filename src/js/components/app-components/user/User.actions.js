@@ -1,3 +1,5 @@
+var config = require('config')
+
 export function getTweets(data) {
     console.log(data)
     //
@@ -5,7 +7,7 @@ export function getTweets(data) {
         dispatch(formSubmitting())
 
         setTimeout(() => {
-            fetch('http://localhost:3000/getTweets', {
+            fetch(config.serverUrL + '/getTweets', {
                 method: 'post',
                 headers: {
                     // 'Accept': 'application/json',

@@ -7,6 +7,13 @@ var cheerio = require('cheerio');
 var moment = require('moment');
 var https = require('https');
 
+// var redis = require('redis');
+// var redisClient = redis.createClient();
+// redisClient.on('connect', function() {
+//    console.log('redis connected!');
+// });
+
+
 //Configure Twitter
 var Twitter = require('twitter');
 var client = new Twitter({
@@ -24,7 +31,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://localhost:8080');
+    // res.setHeader('Access-Control-Allow-Origin', 'https://localhost:8080');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -122,6 +130,11 @@ app.get('/getTweetById/:id', function(req, res) {
     fetchTweetById(tweet_id, res);
 });
 
+/**
+ * Fetch Tweet by ID CACHE THIS!!!
+ * @param tweet_id
+ * @param res
+ */
 var fetchTweetById = function(tweet_id, res) {
     var url = 'https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F' + tweet_id;
     console.log(url)
@@ -152,11 +165,19 @@ app.get('/getProfileData/:user', function(req, res) {
 })
 
 /**
- * Start server
+ * Start HTTPS server
  */
-https.createServer({
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
-}, app).listen(3000, function() {
-    console.log('Example app listening on port 3000');
-});
+
+// https.createServer({
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem')
+// }, app).listen(3000, function() {
+//     console.log('Example app listening on port 3000');
+// });
+
+/**
+ * Start regular server
+ */
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!')
+})

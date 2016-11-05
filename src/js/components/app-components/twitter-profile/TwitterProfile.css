@@ -1,26 +1,35 @@
 /*
-Error: Undefined mixin 'responsive'.
-        on line 4 of TwitterProfile.scss, in `responsive'
-        from line 4 of TwitterProfile.scss
+Error: Undefined variable: "$cl-athens-grey".
+        on line 13 of TwitterProfile.scss
 
-1: .tweet-profile-wrapper {
-2:   height: 280px;
-3:   position: relative;
-4:   @include responsive(mobile) {
-5:     height: 60px;
-6:   }
-7: 
-8:   @include responsive(tablet) {
-9:     height: 200px;
+8:     left: 0;
+9:     right: 0;
+10:     bottom: 0;
+11:     overflow: hidden;
+12:     background-size: cover;
+13:     background-color: $cl-athens-grey;
+14: 
+15:     img {
+16:       width: 50vw;
+17:       height: 25vh;
+18:       transform: translateY(-15%);
 
 Backtrace:
-TwitterProfile.scss:4:in `responsive'
-TwitterProfile.scss:4
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+TwitterProfile.scss:13
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
@@ -69,4 +78,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'responsive'.\A         on line 4 of TwitterProfile.scss, in `responsive'\A         from line 4 of TwitterProfile.scss\A \A 1: .tweet-profile-wrapper {\A 2:   height: 280px;\A 3:   position: relative;\A 4:   @include responsive(mobile) {\A 5:     height: 60px;\A 6:   }\A 7: \A 8:   @include responsive(tablet) {\A 9:     height: 200px;"; }
+  content: "Error: Undefined variable: \"$cl-athens-grey\".\A         on line 13 of TwitterProfile.scss\A \A 8:     left: 0;\A 9:     right: 0;\A 10:     bottom: 0;\A 11:     overflow: hidden;\A 12:     background-size: cover;\A 13:     background-color: $cl-athens-grey;\A 14: \A 15:     img {\A 16:       width: 50vw;\A 17:       height: 25vh;\A 18:       transform: translateY(-15%);"; }

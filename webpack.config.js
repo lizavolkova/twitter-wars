@@ -16,6 +16,10 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0'],
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
@@ -23,6 +27,9 @@ module.exports = {
     path: __dirname + "/src/",
     publicPath: '/src/',
     filename: "client.min.js"
+  },
+  externals: {
+    'config': JSON.stringify(require('./src/globals/config/config.dev.json'))
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),

@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'responsive'.
-        on line 12 of app.scss, in `responsive'
-        from line 12 of app.scss
+        on line 34 of app.scss, in `responsive'
+        from line 34 of app.scss
 
-7:   box-sizing: border-box;
-8: 
-9:   .row {
-10:     height: 100%;
-11:     display: table-row;
-12:     @include responsive(mobile) {
-13:       display: block;
-14:     }
-15: 
-16:     .no-float {
-17:       display: table-cell;
+29:     position: absolute;
+30:     top: 290px;
+31:     left: 50%;
+32:     transform: translate(-50%);
+33: 
+34:     @include responsive(mobile) {
+35:       top: 247px;
+36:     }
+37: 
+38:     .white-button {
+39:       background-color: $cl-white;
 
 Backtrace:
-app.scss:12:in `responsive'
-app.scss:12
+app.scss:34:in `responsive'
+app.scss:34
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -82,4 +82,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'responsive'.\A         on line 12 of app.scss, in `responsive'\A         from line 12 of app.scss\A \A 7:   box-sizing: border-box;\A 8: \A 9:   .row {\A 10:     height: 100%;\A 11:     display: table-row;\A 12:     @include responsive(mobile) {\A 13:       display: block;\A 14:     }\A 15: \A 16:     .no-float {\A 17:       display: table-cell;"; }
+  content: "Error: Undefined mixin 'responsive'.\A         on line 34 of app.scss, in `responsive'\A         from line 34 of app.scss\A \A 29:     position: absolute;\A 30:     top: 290px;\A 31:     left: 50%;\A 32:     transform: translate(-50%);\A 33: \A 34:     @include responsive(mobile) {\A 35:       top: 247px;\A 36:     }\A 37: \A 38:     .white-button {\A 39:       background-color: $cl-white;"; }

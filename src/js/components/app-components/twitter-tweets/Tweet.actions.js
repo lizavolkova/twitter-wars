@@ -1,3 +1,5 @@
+var config = require('config')
+
 export function getTweets(props) {
     console.log('fetching tweets')
     // var data = {
@@ -7,8 +9,8 @@ export function getTweets(props) {
     // }
 
 
-    var url = 'https://localhost:3000/getTweets?userName=' + props.userName +'&sinceDate=' + props.sinceDate + '&untilDate=' + props.untilDate
-    // var url = 'https://localhost:3000/getTweets?userName=' + props.userName + '&sinceDate=2016-09-26&untilDate=2016-09-28'
+    var url = config.serverUrL + '/getTweets?userName=' + props.userName +'&sinceDate=' + props.sinceDate + '&untilDate=' + props.untilDate
+    // var url = 'http://localhost:3000/getTweets?userName=' + props.userName + '&sinceDate=2016-09-26&untilDate=2016-09-28'
 
     return function(dispatch) {
         dispatch(tweetsFetching())
@@ -41,8 +43,8 @@ export function getTweets(props) {
 
 
 export function getTweetById(props) {
-    // var url = 'https://localhost:3000/getTweetById/realDonaldTrump/671809255561932806'
-    var url = 'https://localhost:3000/testURL';
+    // var url = config.serverUrL + '/getTweetById/realDonaldTrump/671809255561932806'
+    var url = config.serverUrL  + '/testURL';
     return function(dispatch) {
         dispatch(tweetsFetching())
 

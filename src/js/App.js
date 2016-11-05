@@ -10,8 +10,6 @@ import base64 from 'base-64'
 export default class App extends React.Component {
     constructor(props) {
         super(props)
-
-
         const tweetIds = this.getQueryParams()
 
         this.state = {
@@ -29,28 +27,18 @@ export default class App extends React.Component {
                 tweet_id: tweetIds[1]
             }
         }
-        console.log(this.state)
     }
 
     getQueryParams() {
-        const searchQuery = window.location.search;
-        let ids = '';
-
-        if (searchQuery.substring(0,6) == '?link=') {
-            const decodedUrl = base64.decode(searchQuery.substring(6, window.location.search.length))
-            if (decodedUrl.split('&') === 2) {
-                ids =decodedUrl.split('&')
-            }
-        }
-
-        return ids
-
+        return this.getPermalinkIds(window.location.href)
     }
 
     componentDidMount() {
-        this.shuffleTweets()
-    }
+        twttr.ready(() => {
+            this.shuffleTweets()
+        });
 
+    }
 
     shuffleTweets() {
         var campaignStartDate = new Date("June 16, 2015");
@@ -59,72 +47,61 @@ export default class App extends React.Component {
         var sinceDate = new Date(untilDate.getTime());
         sinceDate.setDate(sinceDate.getDate() - 1)
         this.setState({
-            // userRight: {
-            //     tweet_id: ''
-            // },
-            // userLeft: {
-            //     tweet_id: ''
-            // },
             sinceDate: sinceDate.toISOString().slice(0,10),
             untilDate: untilDate.toISOString().slice(0,10)
-        }, this.logState())
+        })
     }
 
     onShuffle(e) {
         e.preventDefault()
+        if (window.location.search) {
+            history.pushState(null, "", location.href.split("?")[0]);
+        }
+
         this.shuffleTweets()
     }
 
+    getPermalinkIds(url) {
+        let ids = [];
+        const searchQuery = /link=(.*)/.exec(url)
+
+        if (searchQuery && searchQuery[0].substring(0,5) == 'link=') {
+            const decodedUrl = base64.decode(searchQuery[0].substring(5, searchQuery[0].length))
+            if (decodedUrl.split('&').length === 2) {
+                ids = decodedUrl.split('&').slice(0)
+            }
+        }
+
+        return ids
+    }
+
     setTweetPermalink(tweet) {
-        // console.log('SET TWEET PERMALINK', tweet)
-        // console.log('NEXT LINE AFTER SET')
-        // const isRightUser = this.state.userRight.userName === tweet.userName
-        // console.log('isRightUser?', isRightUser)
-        //
-        // if (isRightUser) {
-        //     this.setState({
-        //         userRight: {
-        //             tweet_id: tweet.tweet_id,
-        //             userName: tweet.userName
-        //         }
-        //     }, )
-        // } else {
-        //     this.setState({
-        //         userLeft: {
-        //             tweet_id: tweet.tweet_id,
-        //             userName: tweet.userName
-        //         }
-        //     })
-        // }
-        //this.generatePermalink()
+        const pastTweetIds = this.getPermalinkIds(this.state.permalink)
+        let newTweetIds = pastTweetIds.slice(0)
+
+        if (tweet.userName === 'realDonaldTrump') {
+            newTweetIds[0] = tweet.tweet_id
+        } else {
+            newTweetIds[1] = tweet.tweet_id
+        }
+
+        this.generatePermalink(newTweetIds)
     }
 
-    componentWillReceiveProps() {
-        //console.log('APP:componentWillReceiveProps')
-    }
-    componentDidUpdate() {
-        //console.log('APP:componentDidUpdate', this.state)
-    }
-
-    generatePermalink() {
-        const var1 = '667023957367914496' //T
-        const var2 = '666636423819202560' //H
-
-        var urlParam = var1 + '&' + var2
+    generatePermalink(ids) {
+        var urlParam = ids[0] + '&' + ids[1]
         var encodedUrlParam = base64.encode(urlParam)
-        //console.log('APP:generatePermalink', this.state)
-       // console.log(window.location.protocol + '//' + window.location.host + '/' + encodedUrlParam)
-    }
-
-    logState() {
-        //console.log('APP:logState:', this.state)
+        this.setState({
+            permalink: 'http://' + window.location.host + '/index.html?link=' + encodedUrlParam
+        })
     }
 
     render() {
+        console.log('APP.JS RENDERING!')
         return (
                 <Main>
                     <div className="row">
-                        <div className="col-md-6 col-sm-6 col-xs-12 col-left no-float">
+                        <div className="col-md-6 col-sm-6 col-xs-6 col-left no-float">
                             <User
                             userName={this.state.userLeft.userName}
                             sinceDate={this.state.sinceDate}
@@ -132,7 +109,7 @@ export default class App extends React.Component {
                             tweet_id={this.state.userLeft.tweet_id}
                             tweetIdReceived={this.setTweetPermalink.bind(this)}/>
                         </div>
-                        <div className="col-md-6 col-sm-6 col-xs-12 col-right no-float">
+                        <div className="col-md-6 col-sm-6 col-xs-6 col-right no-float">
                             <User
                             userName={this.state.userRight.userName}
                             sinceDate={this.state.sinceDate}
@@ -146,20 +123,13 @@ export default class App extends React.Component {
                         <a href="#" className="white-button" onClick={this.onShuffle.bind(this)}>Shuffle</a>
                         <a href={this.state.permalink}></a>
                     </div>
-                    {/*<div className="permalink">*/}
-                        {/*<a href={this.state.permalink}> </a>*/}
-                    {/*</div>*/}
+                    <div className="permalink">
+
+                        <a href={this.state.permalink}>PERMALINK!</a>
+                    </div>
                 </Main>
 
         )
 
     }
 }
-
-
-
-
-
-
-
-

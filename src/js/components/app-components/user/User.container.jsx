@@ -21,16 +21,14 @@ class User extends React.Component {
                 tweet_id: this.props.tweet_id
             }
         }
-        console.log(this.state)
     }
 
-    componentWillReceiveProps() {
-        // console.log('USER COMP RECEIVED PROPS')
+    componentWillReceiveProps(nextProps) {
         this.setState({
             tweetData: {
                 userName: this.props.userName,
-                sinceDate: this.props.sinceDate,
-                untilDate: this.props.untilDate,
+                sinceDate: nextProps.sinceDate,
+                untilDate: nextProps.untilDate,
                 tweet_id: this.props.tweet_id
             }
         })
@@ -40,28 +38,28 @@ class User extends React.Component {
         this.props.tweetIdReceived(tweet_id)
     }
 
-    componentDidUpdate() {
-        console.log('USER.CONTAINER:componentDidUpdate', this.state)
-    }
-
-
     /**
      * Render component
      * @returns {XML}
      */
     render() {
-        return (
-            <div className="comp-user">
-                <TwitterProfile userData={this.state.userData} />
-                {/*<Tweet*/}
-                    {/*userName={this.props.userName}*/}
-                    {/*sinceDate={this.props.sinceDate}*/}
-                    {/*untilDate={this.props.untilDate} />*/}
-                <TwitterWidget
-                    tweetData={this.state.tweetData}
-                    hasFetchedTweetData={this.setTweetId.bind(this)}/>
-            </div>
-        )
+        if (twttr.events) {
+            return (
+                <div className="comp-user">
+                    <TwitterProfile userData={this.state.userData} />
+                    <TwitterWidget
+                        tweetData={this.state.tweetData}
+                        hasFetchedTweetData={this.setTweetId.bind(this)}/>
+                </div>
+            )
+        } else {
+            return (
+                <div className="comp-user">
+                    <TwitterProfile userData={this.state.userData} />
+                </div>
+            )
+        }
+
     }
 }
 

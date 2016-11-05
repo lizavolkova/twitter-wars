@@ -1,7 +1,9 @@
+var config = require('config')
+
 export function getProfileData(userName) {
     return function(dispatch) {
         dispatch(fetchingData(userName))
-        var url = 'https://localhost:3000/getProfileData/' + userName
+        var url = config.serverUrL + '/getProfileData/' + userName
 
             fetch(url, {
                 method: 'get'

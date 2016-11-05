@@ -1,11 +1,11 @@
 .comp-twitter-widget {
-  margin-top: 250px;
+  margin-top: 192px;
   position: relative;
   transition: opacity 1s;
   opacity: 0;
+
   @include responsive(mobile) {
-    background-color: $cl-white;
-    margin-top: 20px;
+    margin-top: 87px;
     min-height: 250px;
     opacity: 1;
   }
@@ -45,9 +45,15 @@
     max-width: 500px;
     min-width: 22px;
     width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    padding: 15px;
+
+    @include responsive(mobile) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
   }
 
 }

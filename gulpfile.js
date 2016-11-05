@@ -13,9 +13,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
 var notify = require('gulp-notify');
-var minifycss = require( 'gulp-minify-css' );
+var exec = require('child_process').exec;
 
 gulp.task('default', ['sass', 'webpack-dev-server', 'watch']);
+gulp.task('build', ['html', 'sass', 'webpack']);
 
 gulp.task('sass', function () {
     return gulp.src([
@@ -33,6 +34,7 @@ gulp.task('sass', function () {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/'))
+        //.pipe(gulp.dest('./dist/'))
         .pipe(livereload())
 });
 
@@ -45,7 +47,7 @@ gulp.task('webpack-dev-server', function(callback) {
         contentBase: './src',
         inline: true,
         hot: true,
-        https: true,
+        // https: true,
         path: '/' + myConfig.output.path,
         stats: {
             colors: true
@@ -58,7 +60,6 @@ gulp.task('webpack-dev-server', function(callback) {
     })
 });
 
-
 gulp.task('watch', function() {
     gulp.watch([
         './src/globals/scss/*.scss',
@@ -66,3 +67,29 @@ gulp.task('watch', function() {
         './src/js/components/**/*.scss'
     ], ['sass']);
 });
+
+//prod tasks
+gulp.task('html', function() {
+    return gulp.src('./src/index.html')
+        .pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('webpack', function() {
+    var myConfig = Object.create(webpackConfig);
+    myConfig.devtool = 'eval';
+    myConfig.debug = false;
+    myConfig.output.path = __dirname + '/dist/';
+    myConfig.output.publicPath = '/dist/';
+
+    webpack((myConfig), function(err, stats) {
+        if(err) throw new gutil.PluginError("webpack", err);
+        gutil.log("[webpack]", stats.toString({
+            // output options
+        }));
+    });
+
+});
+
+
+
+

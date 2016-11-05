@@ -15,6 +15,26 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <!--<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
+
+              return t;
+    }(document, "script", "twitter-wjs"));
+
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <style>
       form {
@@ -28,6 +48,6 @@
 
     <div id="app"></div>
     <script src="client.min.js"></script>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </body>
 </html>

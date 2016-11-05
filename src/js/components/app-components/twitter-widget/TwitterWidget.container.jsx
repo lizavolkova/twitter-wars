@@ -14,30 +14,44 @@ import classNames from "classnames";
 class TwitterWidget extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            fetching: true
+        }
     }
 
     componentDidMount() {
+        console.log('componentDidMount')
         this.props.dispatch(createTweet(this.props.tweetData.userName))
         this.props.dispatch(getTweet(this.props.tweetData))
 
-
-        // window.twttr.events.bind('rendered', () => {
-        //     console.log('WIDGET RENDERED!!')
-        // })
+        var _this = this;
+        twttr.events.bind(
+            'rendered',
+            function () {
+                _this.setState({
+                    fetching: false
+                })
+            }
+        );
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('TWITTER WIDGET: componentWillReceiveProps', this.props.tweetData, nextProps.tweetData)
         if (nextProps.tweetData.sinceDate !== this.props.tweetData.sinceDate && nextProps.tweetData.untilDate !== this.props.tweetData.untilDate) {
-            console.log('TWITTER WIDGET trigger getTweet')
-            this.props.dispatch(getTweet(this.props.tweetData))
+            this.setState({
+                fetching: true
+            }, this.getTweet)
         }
     }
 
+    getTweet() {
+        this.props.dispatch(getTweet(this.props.tweetData))
+    }
+
     componentDidUpdate(prevProps) {
-        if (window) {
-            window.twttr.widgets.load(this.refs.widgetWrapper.getElementsByTagName('blockquote'))
+        if (twttr && !this.props.tweet.fetching && this.refs.widgetWrapper.getElementsByTagName('blockquote').length > 0) {
+            twttr.widgets.load(this.refs.widgetWrapper.getElementsByTagName('blockquote'))
         }
+
 
         if (this.props.tweet.tweet_id && this.props.tweet.tweet_id !== prevProps.tweet.tweet_id) {
             var tweet_id = {
@@ -53,7 +67,6 @@ class TwitterWidget extends React.Component {
      * @returns {XML}
      */
     render() {
-        console.log('WIDGET RENDER:', this.props.tweet)
         var compWidgetClass = classNames({
             'comp-twitter-widget fadeIn': true,
             'fadeOut': this.props.tweet.error || this.props.tweet.fetching
@@ -61,12 +74,12 @@ class TwitterWidget extends React.Component {
 
         var widgetLoaderClass = classNames({
             'twitter-widget-loader-container': true,
-            'hide': !this.props.tweet.fetching
+            'hide': !this.state.fetching
         })
 
         var widgetContentClass = classNames({
             'twitter-widget-wrapper': true,
-            'hide': !this.props.tweet.fetched
+            'hide': this.state.fetching
         })
 
       return (
