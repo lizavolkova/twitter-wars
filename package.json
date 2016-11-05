@@ -55,7 +55,7 @@
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
-    "postinstall": "gulp",
+    "postinstall": "gulp build",
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
