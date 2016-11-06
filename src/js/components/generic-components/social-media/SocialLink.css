@@ -9,8 +9,8 @@ Error: Undefined mixin 'responsive'.
 8:     margin-top: 7px;
 9: 
 10:     @include responsive(mobile) {
-11:       font-size: 24px;
-12:       margin-top: 3px;
+11:       font-size: 26px;
+12:       margin-top: 7px;
 13:     }
 14:   }
 15: 
@@ -82,4 +82,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'responsive'.\A         on line 10 of SocialLink.scss, in `responsive'\A         from line 10 of SocialLink.scss\A \A 5: \A 6:   .fa {\A 7:     padding: 5px 20px;\A 8:     margin-top: 7px;\A 9: \A 10:     @include responsive(mobile) {\A 11:       font-size: 24px;\A 12:       margin-top: 3px;\A 13:     }\A 14:   }\A 15: "; }
+  content: "Error: Undefined mixin 'responsive'.\A         on line 10 of SocialLink.scss, in `responsive'\A         from line 10 of SocialLink.scss\A \A 5: \A 6:   .fa {\A 7:     padding: 5px 20px;\A 8:     margin-top: 7px;\A 9: \A 10:     @include responsive(mobile) {\A 11:       font-size: 26px;\A 12:       margin-top: 7px;\A 13:     }\A 14:   }\A 15: "; }

@@ -7,6 +7,10 @@
   border-top: 1px solid $cl-pale-sky;
   display: table;
 
+  @include responsive(mobile) {
+    height: 50px;
+  }
+
   .social-mobile-share {
     display: none;
 
@@ -25,7 +29,6 @@
   .social-links {
     float: right;
     display: table-row;
-    //padding-right: 50px;
 
     @include responsive(mobile) {
       padding-right: 0;
