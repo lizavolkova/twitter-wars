@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="406a0154-f759-4980-9ea5-7a2f8e6a8d5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/App.js" afterPath="$PROJECT_DIR$/src/js/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/client.js" afterPath="$PROJECT_DIR$/src/js/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx" afterPath="$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx" />
     </list>
     <ignored path="react-test-webpage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +34,21 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="116" selection-end-column="81" />
+            <state relative-caret-position="250">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.container.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterWidget.container.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TwitterWidget.container.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+            <state relative-caret-position="675">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -60,27 +75,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterProfile.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="140" column="6" selection-start-line="125" selection-start-column="4" selection-end-line="140" selection-end-column="6" />
+            <state relative-caret-position="490">
+              <caret line="158" column="44" selection-start-line="158" selection-start-column="44" selection-end-line="158" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -131,7 +136,6 @@
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-tweets/Tweet.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/globals/globals.js" />
         <option value="$PROJECT_DIR$/src/js/globals.js" />
-        <option value="$PROJECT_DIR$/src/js/client.js" />
         <option value="$PROJECT_DIR$/src/js/components/globals/config.dev.json" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/user/User.actions.js" />
         <option value="$PROJECT_DIR$/src/globals/config/config.prod.json" />
@@ -149,18 +153,19 @@
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.container.jsx" />
-        <option value="$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.reducer.js" />
-        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js" />
         <option value="$PROJECT_DIR$/src/js/components/app.scss" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" />
         <option value="$PROJECT_DIR$/src/js/store.js" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.scss" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/src/js/App.js" />
-        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/js/client.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js" />
+        <option value="$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx" />
+        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx" />
+        <option value="$PROJECT_DIR$/src/js/App.js" />
       </list>
     </option>
   </component>
@@ -369,6 +374,10 @@
               <option name="myItemId" value="app-components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -397,6 +406,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="twitter-widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-wars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter-wars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app-components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,15 +576,15 @@
       <workItem from="1475190316913" duration="78824000" />
       <workItem from="1476506686234" duration="6522000" />
       <workItem from="1476653854370" duration="99688000" />
-      <workItem from="1477018847671" duration="125156000" />
+      <workItem from="1477018847671" duration="130432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314324000" />
+    <option name="totallyTimeSpent" value="319600000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2891" y="-11" width="2326" height="1318" extended-state="6" />
+    <frame x="-2891" y="-11" width="2326" height="1318" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20269097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -591,7 +626,7 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -812,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/app-components/user/User.actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -902,14 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="57" column="69" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.container.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -928,29 +947,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#162#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="49" column="58" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -991,39 +991,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="140" column="6" selection-start-line="125" selection-start-column="4" selection-end-line="140" selection-end-column="6" />
+        <state relative-caret-position="490">
+          <caret line="158" column="44" selection-start-line="158" selection-start-column="44" selection-end-line="158" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#162#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="116" selection-end-column="81" />
+        <state relative-caret-position="250">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/user/User.container.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.container.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+        <state relative-caret-position="675">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
-          <folding />
         </state>
       </provider>
     </entry>

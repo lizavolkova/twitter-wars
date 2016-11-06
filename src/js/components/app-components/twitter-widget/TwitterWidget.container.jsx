@@ -20,9 +20,11 @@ class TwitterWidget extends React.Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount')
         this.props.dispatch(createTweet(this.props.tweetData.userName))
-        this.props.dispatch(getTweet(this.props.tweetData))
+        if (this.props.tweetData.sinceDate) {
+            this.props.dispatch(getTweet(this.props.tweetData))
+        }
+
 
         var _this = this;
         twttr.events.bind(
@@ -36,7 +38,7 @@ class TwitterWidget extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.tweetData.sinceDate !== this.props.tweetData.sinceDate && nextProps.tweetData.untilDate !== this.props.tweetData.untilDate) {
+        if (nextProps.tweetData.sinceDate && nextProps.tweetData.sinceDate !== this.props.tweetData.sinceDate && nextProps.tweetData.untilDate !== this.props.tweetData.untilDate) {
             this.setState({
                 fetching: true
             }, this.getTweet)
@@ -86,8 +88,6 @@ class TwitterWidget extends React.Component {
             'twitter-widget-wrapper': true,
             'hide': this.state.fetching
         })
-
-        console.log(this)
 
       return (
 

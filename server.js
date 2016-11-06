@@ -156,6 +156,7 @@ var fetchTweetById = function(tweet_id, res) {
     console.log('now fetching tweet data by id');
     var cachedTweet = myCache.get(tweet_id);
     if (cachedTweet) {
+        console.log('sending cached tweet');
         res.send(cachedTweet);
     } else {
         var url = 'https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F' + tweet_id;

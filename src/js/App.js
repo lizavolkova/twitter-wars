@@ -6,16 +6,15 @@ import base64 from 'base-64'
 import moment from 'moment'
 //import FormInput from './components/generic-components/form/FormInput.jsx';
 
+
 export default class App extends React.Component {
     constructor(props) {
         super(props)
-        const tweetIds = this.getQueryParams()
+        const tweetIds = this.getPermalinkIds(window.location.href)
 
         this.state = {
-            // sinceDate: '2014-10-15',
-            // untilDate: '2016-10-16'
             permalink: '',
-            sinceDate: '',
+            sinceDate: tweetIds[2],
             untilDate: '',
             userLeft: {
                 userName: 'realDonaldTrump',
@@ -28,24 +27,21 @@ export default class App extends React.Component {
         }
     }
 
-    getQueryParams() {
-        return this.getPermalinkIds(window.location.href)
-    }
-
     componentDidMount() {
-        twttr.ready(() => {
+        if (!this.state.sinceDate) {
             this.shuffleTweets()
-        });
-
+        }
     }
 
     shuffleTweets() {
+        console.log('SHUFFLE TWEETS!')
         var campaignStartDate = new Date("June 16, 2015");
         var today = new Date();
         var untilDate = new Date(campaignStartDate.getTime() + Math.random() * (today.getTime() - campaignStartDate.getTime()))
-        var sinceDate = new Date(untilDate.getTime());
+        var sinceDate = new Date(untilDate.getTime())
         sinceDate.setDate(sinceDate.getDate() - 1)
         this.setState({
+            permalink: '',
             sinceDate: sinceDate.toISOString().slice(0,10),
             untilDate: untilDate.toISOString().slice(0,10),
             userLeft: {
@@ -73,12 +69,11 @@ export default class App extends React.Component {
         const searchQuery = /link=(.*)/.exec(url)
 
         if (searchQuery && searchQuery[0].substring(0,5) == 'link=') {
-            const decodedUrl = base64.decode(searchQuery[0].substring(5, searchQuery[0].length))
-            if (decodedUrl.split('&').length === 2) {
+            const decodedUrl = base64.decode(searchQuery[1])
+            if (decodedUrl.split('&').length === 3) {
                 ids = decodedUrl.split('&').slice(0)
             }
         }
-
         return ids
     }
 
@@ -96,7 +91,7 @@ export default class App extends React.Component {
     }
 
     generatePermalink(ids) {
-        var urlParam = ids[0] + '&' + ids[1]
+        var urlParam = ids[0] + '&' + ids[1] + '&' + this.state.sinceDate
         var encodedUrlParam = base64.encode(urlParam)
         this.setState({
             permalink: 'http://' + window.location.host + '/index.html?link=' + encodedUrlParam
@@ -145,21 +140,3 @@ export default class App extends React.Component {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

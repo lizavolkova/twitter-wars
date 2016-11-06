@@ -36,6 +36,7 @@ export function getTweet(props) {
             successResponse.userName = userName
             dispatch(tweetFetched(successResponse))
         }).catch(err => {
+            console.log(err)
             dispatch(tweetFetchError(userName))
         })
         // }, 0);

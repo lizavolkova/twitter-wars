@@ -11,7 +11,6 @@ class User extends React.Component {
                 description: 'description',
                 name: 'name',
                 screen_name: '@user',
-                // profile_image_url: 'http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-md.png',
                 profile_image_url: ''
             },
             tweetData: {
@@ -29,7 +28,7 @@ class User extends React.Component {
                 userName: this.props.userName,
                 sinceDate: nextProps.sinceDate,
                 untilDate: nextProps.untilDate,
-                tweet_id: this.props.tweet_id
+                tweet_id: nextProps.tweet_id
             }
         })
     }
