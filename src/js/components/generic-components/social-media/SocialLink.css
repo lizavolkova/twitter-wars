@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'responsive'.
-        on line 10 of SocialLink.scss, in `responsive'
-        from line 10 of SocialLink.scss
+        on line 11 of SocialLink.scss, in `responsive'
+        from line 11 of SocialLink.scss
 
-5: 
 6:   .fa {
-7:     padding: 5px 20px;
-8:     margin-top: 7px;
-9: 
-10:     @include responsive(mobile) {
-11:       font-size: 45px;
-12:       padding: 5px 33px;
-13:       margin-top: 13px;
-14:     }
-15: 
+7:     padding: 14px 30px;
+8:     font-size: 26px;
+9:     //margin-top: 7px;
+10: 
+11:     @include responsive(mobile) {
+12:       font-size: 45px;
+13:       padding: 5px 33px;
+14:       margin-top: 13px;
+15:     }
+16: 
 
 Backtrace:
-SocialLink.scss:10:in `responsive'
-SocialLink.scss:10
+SocialLink.scss:11:in `responsive'
+SocialLink.scss:11
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -82,4 +82,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'responsive'.\A         on line 10 of SocialLink.scss, in `responsive'\A         from line 10 of SocialLink.scss\A \A 5: \A 6:   .fa {\A 7:     padding: 5px 20px;\A 8:     margin-top: 7px;\A 9: \A 10:     @include responsive(mobile) {\A 11:       font-size: 45px;\A 12:       padding: 5px 33px;\A 13:       margin-top: 13px;\A 14:     }\A 15: "; }
+  content: "Error: Undefined mixin 'responsive'.\A         on line 11 of SocialLink.scss, in `responsive'\A         from line 11 of SocialLink.scss\A \A 6:   .fa {\A 7:     padding: 14px 30px;\A 8:     font-size: 26px;\A 9:     //margin-top: 7px;\A 10: \A 11:     @include responsive(mobile) {\A 12:       font-size: 45px;\A 13:       padding: 5px 33px;\A 14:       margin-top: 13px;\A 15:     }\A 16: "; }

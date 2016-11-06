@@ -4,8 +4,9 @@
   position: relative;
 
   .fa {
-    padding: 5px 20px;
-    margin-top: 7px;
+    padding: 14px 30px;
+    font-size: 26px;
+    //margin-top: 7px;
 
     @include responsive(mobile) {
       font-size: 45px;
