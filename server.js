@@ -87,6 +87,8 @@ var findRandomTweet = function(html, userName, sinceDate) {
         var i = 0;
         var text = '';
 
+        numberOfTweets = numberOfTweets || 10;
+
         while ( text === null ||  ((text !== null && text.length === 0) && (!queryDate.isSame(tweetDate, 'day')) && i < numberOfTweets ) ) {
             console.log('looking for random tweet..');
             randomTweet = Math.floor(Math.random() * numberOfTweets) + 1;
