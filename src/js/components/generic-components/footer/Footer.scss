@@ -7,9 +7,28 @@
   border-top: 1px solid $cl-pale-sky;
   display: table;
 
+  .social-mobile-share {
+    display: none;
+
+    .fa {
+      float: right;
+      font-size: 37px;
+      margin-top: 1px;
+      padding: 5px 8px;
+      color: $cl-white;
+    }
+
+    @include responsive(mobile) {
+      display: block;
+    }
+  }
   .social-links {
     float: right;
     display: table-row;
-    padding-right: 50px;
+    //padding-right: 50px;
+
+    @include responsive(mobile) {
+      padding-right: 0;
+    }
   }
 }
