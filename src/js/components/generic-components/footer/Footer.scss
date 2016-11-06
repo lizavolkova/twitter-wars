@@ -8,6 +8,10 @@
   display: table;
 
   @include responsive(mobile) {
+    height: 80px;
+  }
+
+  @include responsive(mobile-landscape) {
     height: 50px;
   }
 

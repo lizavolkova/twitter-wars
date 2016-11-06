@@ -8,6 +8,12 @@
     margin-top: 7px;
 
     @include responsive(mobile) {
+      font-size: 45px;
+      padding: 5px 33px;
+      margin-top: 13px;
+    }
+
+    @include responsive(mobile-landscape) {
       font-size: 26px;
       margin-top: 7px;
     }
