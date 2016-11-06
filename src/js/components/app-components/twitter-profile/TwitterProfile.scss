@@ -3,7 +3,7 @@
   position: relative;
 
   @include  responsive(mobile-landscape) {
-    height: 130px;
+    height: 125px;
   }
 
   .profile-background {
@@ -18,13 +18,13 @@
 
     img {
       width: 50vw;
-      height: 25vh;
+      height: auto;
       transform: translateY(-15%);
       object-fit: cover;
       filter:brightness(60%);
     }
     @include responsive(mobile) {
-      //display: none;
+      min-height: 125px;
     }
   }
 

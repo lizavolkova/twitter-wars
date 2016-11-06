@@ -4,9 +4,8 @@
     <list default="true" id="406a0154-f759-4980-9ea5-7a2f8e6a8d5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles.css" afterPath="$PROJECT_DIR$/dist/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss" afterPath="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.css" afterPath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.scss" afterPath="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.css" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" afterPath="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" />
     </list>
     <ignored path="react-test-webpage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Footer.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Footer.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
               <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterProfile.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -151,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.reducer.js" />
         <option value="$PROJECT_DIR$/src/js/components/app.scss" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.container.jsx" />
-        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" />
         <option value="$PROJECT_DIR$/src/js/store.js" />
         <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.scss" />
         <option value="$PROJECT_DIR$/src/index.html" />
@@ -164,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/js/components/generic-components/social-media/SocialLink.scss" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.container.jsx" />
         <option value="$PROJECT_DIR$/src/js/components/generic-components/footer/Footer.scss" />
+        <option value="$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss" />
       </list>
     </option>
   </component>
@@ -604,12 +613,12 @@
       <workItem from="1475190316913" duration="78824000" />
       <workItem from="1476506686234" duration="6522000" />
       <workItem from="1476653854370" duration="99688000" />
-      <workItem from="1477018847671" duration="131411000" />
+      <workItem from="1477018847671" duration="131791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320579000" />
+    <option name="totallyTimeSpent" value="320959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2891" y="-11" width="2326" height="1318" extended-state="6" />
@@ -967,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-widget/TwitterWidget.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
@@ -1086,6 +1087,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/app-components/twitter-profile/TwitterProfile.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>

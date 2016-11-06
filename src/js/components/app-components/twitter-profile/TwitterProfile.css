@@ -8,7 +8,7 @@ Error: Undefined mixin 'responsive'.
 3:   position: relative;
 4: 
 5:   @include  responsive(mobile-landscape) {
-6:     height: 130px;
+6:     height: 125px;
 7:   }
 8: 
 9:   .profile-background {
@@ -70,4 +70,4 @@ C:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'responsive'.\A         on line 5 of TwitterProfile.scss, in `responsive'\A         from line 5 of TwitterProfile.scss\A \A 1: .tweet-profile-wrapper {\A 2:   height: 172px;\A 3:   position: relative;\A 4: \A 5:   @include  responsive(mobile-landscape) {\A 6:     height: 130px;\A 7:   }\A 8: \A 9:   .profile-background {\A 10:     position: absolute;"; }
+  content: "Error: Undefined mixin 'responsive'.\A         on line 5 of TwitterProfile.scss, in `responsive'\A         from line 5 of TwitterProfile.scss\A \A 1: .tweet-profile-wrapper {\A 2:   height: 172px;\A 3:   position: relative;\A 4: \A 5:   @include  responsive(mobile-landscape) {\A 6:     height: 125px;\A 7:   }\A 8: \A 9:   .profile-background {\A 10:     position: absolute;"; }

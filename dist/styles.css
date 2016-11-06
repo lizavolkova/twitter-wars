@@ -86,6 +86,121 @@ html, body, .container {
       .container .permalink {
         bottom: 5px; } }
 
+.tweet-profile-wrapper {
+  height: 172px;
+  position: relative; }
+  @media (max-width: 769px) and (orientation: landscape) {
+    .tweet-profile-wrapper {
+      height: 125px; } }
+  .tweet-profile-wrapper .profile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-color: #edeef1; }
+    .tweet-profile-wrapper .profile-background img {
+      width: 50vw;
+      height: auto;
+      transform: translateY(-15%);
+      object-fit: cover;
+      -webkit-filter: brightness(60%);
+      filter: brightness(60%); }
+    @media (max-width: 769px) {
+      .tweet-profile-wrapper .profile-background {
+        min-height: 125px; } }
+  .tweet-profile-wrapper .tweet-profile-user {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 218px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
+  .tweet-profile-wrapper .tweet-profile-user-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    top: 110px;
+    left: 229px;
+    position: absolute; }
+    @media (max-width: 769px) {
+      .tweet-profile-wrapper .tweet-profile-user-name {
+        font-size: 26px;
+        top: 60px;
+        left: 120px; } }
+    @media (max-width: 769px) and (orientation: landscape) {
+      .tweet-profile-wrapper .tweet-profile-user-name {
+        top: 38px;
+        left: 107px; } }
+  .tweet-profile-wrapper .tweet-profile-white-bar {
+    height: 70px;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: absolute;
+    margin-top: 167px;
+    padding-left: 197px;
+    padding-top: 22px;
+    font-size: 16px; }
+    @media (max-width: 769px) {
+      .tweet-profile-wrapper .tweet-profile-white-bar {
+        height: 60px;
+        padding-left: 15px;
+        padding-top: 15px;
+        margin-top: 116px; } }
+    @media (max-width: 769px) and (orientation: landscape) {
+      .tweet-profile-wrapper .tweet-profile-white-bar {
+        margin-top: 80px;
+        font-size: 14px;
+        padding-left: 14px;
+        height: 45px; } }
+    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-user-name {
+      position: relative;
+      display: none;
+      top: auto;
+      left: auto;
+      font-size: 25px; }
+    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-divider-bar.first {
+      color: #ffffff;
+      display: none; }
+    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name {
+      color: #66757f; }
+      .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name:hover {
+        text-decoration: none; }
+  .tweet-profile-wrapper .tweet-profile-content {
+    margin-top: 25px;
+    position: absolute; }
+    @media (max-width: 769px) and (orientation: landscape) {
+      .tweet-profile-wrapper .tweet-profile-content {
+        margin-top: 7px; } }
+    .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar {
+      float: left; }
+      .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 10px;
+        border: 2px solid #ffffff;
+        box-shadow: 1px 1px 4px #000000;
+        background-color: #edeef1;
+        z-index: 2; }
+        .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img.tweet-profile-placeholder {
+          z-index: 1;
+          box-shadow: none; }
+        @media (max-width: 769px) {
+          .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
+            width: 100px;
+            height: 100px; } }
+        @media (max-width: 769px) and (orientation: landscape) {
+          .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
+            width: 80px;
+            height: 80px; } }
+    .tweet-profile-wrapper .tweet-profile-content .tweet-profile-body {
+      float: right; }
+
 .comp-tweet {
   background-color: #fff;
   padding: 9px 12px;
@@ -226,118 +341,6 @@ html, body, .container {
         left: 50%;
         transform: translate(-50%); } }
 
-.tweet-profile-wrapper {
-  height: 172px;
-  position: relative; }
-  @media (max-width: 769px) and (orientation: landscape) {
-    .tweet-profile-wrapper {
-      height: 130px; } }
-  .tweet-profile-wrapper .profile-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    background-size: cover;
-    background-color: #edeef1; }
-    .tweet-profile-wrapper .profile-background img {
-      width: 50vw;
-      height: 25vh;
-      transform: translateY(-15%);
-      object-fit: cover;
-      -webkit-filter: brightness(60%);
-      filter: brightness(60%); }
-  .tweet-profile-wrapper .tweet-profile-user {
-    position: absolute;
-    margin-left: 220px;
-    margin-top: 218px;
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
-  .tweet-profile-wrapper .tweet-profile-user-name {
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-    top: 110px;
-    left: 229px;
-    position: absolute; }
-    @media (max-width: 769px) {
-      .tweet-profile-wrapper .tweet-profile-user-name {
-        font-size: 26px;
-        top: 60px;
-        left: 120px; } }
-    @media (max-width: 769px) and (orientation: landscape) {
-      .tweet-profile-wrapper .tweet-profile-user-name {
-        top: 38px;
-        left: 107px; } }
-  .tweet-profile-wrapper .tweet-profile-white-bar {
-    height: 70px;
-    width: 100%;
-    background-color: #f6f6f6;
-    position: absolute;
-    margin-top: 167px;
-    padding-left: 197px;
-    padding-top: 22px;
-    font-size: 16px; }
-    @media (max-width: 769px) {
-      .tweet-profile-wrapper .tweet-profile-white-bar {
-        height: 60px;
-        padding-left: 15px;
-        padding-top: 15px;
-        margin-top: 116px; } }
-    @media (max-width: 769px) and (orientation: landscape) {
-      .tweet-profile-wrapper .tweet-profile-white-bar {
-        margin-top: 80px;
-        font-size: 14px;
-        padding-left: 14px;
-        height: 45px; } }
-    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-user-name {
-      position: relative;
-      display: none;
-      top: auto;
-      left: auto;
-      font-size: 25px; }
-    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-divider-bar.first {
-      color: #ffffff;
-      display: none; }
-    .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name {
-      color: #66757f; }
-      .tweet-profile-wrapper .tweet-profile-white-bar .tweet-profile-screen-name:hover {
-        text-decoration: none; }
-  .tweet-profile-wrapper .tweet-profile-content {
-    margin-top: 25px;
-    position: absolute; }
-    @media (max-width: 769px) and (orientation: landscape) {
-      .tweet-profile-wrapper .tweet-profile-content {
-        margin-top: 7px; } }
-    .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar {
-      float: left; }
-      .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin-left: 10px;
-        border: 2px solid #ffffff;
-        box-shadow: 1px 1px 4px #000000;
-        background-color: #edeef1;
-        z-index: 2; }
-        .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img.tweet-profile-placeholder {
-          z-index: 1;
-          box-shadow: none; }
-        @media (max-width: 769px) {
-          .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
-            width: 100px;
-            height: 100px; } }
-        @media (max-width: 769px) and (orientation: landscape) {
-          .tweet-profile-wrapper .tweet-profile-content .tweet-profile-avatar img {
-            width: 80px;
-            height: 80px; } }
-    .tweet-profile-wrapper .tweet-profile-content .tweet-profile-body {
-      float: right; }
-
 .comp-footer {
   position: fixed;
   height: 40px;
@@ -364,12 +367,6 @@ html, body, .container {
       .comp-footer .social-links {
         padding-right: 0; } }
 
-.image-fade {
-  opacity: 0;
-  transition: opacity 0.3s; }
-  .image-fade.loaded {
-    opacity: 1; }
-
 .comp-form .error-message {
   font-weight: bold;
   color: red; }
@@ -391,6 +388,12 @@ html, body, .container {
 
 .comp-form button {
   margin-top: 10px; }
+
+.image-fade {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .image-fade.loaded {
+    opacity: 1; }
 
 .comp-social {
   display: table-cell;
