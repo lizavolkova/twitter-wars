@@ -87,9 +87,9 @@ var findRandomTweet = function(html, userName, sinceDate) {
         var i = 0;
         var text = '';
 
-        numberOfTweets = numberOfTweets || 10;
+        var maxNumerToSearch = Math.max(numberOfTweets, 5);
 
-        while ( text === null ||  ((text !== null && text.length === 0) && (!queryDate.isSame(tweetDate, 'day')) && i < numberOfTweets ) ) {
+        while ( text === null ||  ((text !== null && text.length === 0) && (!queryDate.isSame(tweetDate, 'day')) && i <= maxNumerToSearch ) ) {
             console.log('looking for random tweet..');
             randomTweet = Math.floor(Math.random() * numberOfTweets) + 1;
             $tweet = data.find('#stream-items-id').children().eq(randomTweet)
@@ -104,14 +104,16 @@ var findRandomTweet = function(html, userName, sinceDate) {
         }
 
         if ($tweet) {
+            console.log('tweet found!', i, maxNumerToSearch);
             tweet_id = $tweet.attr('data-item-id');
         } else {
+            console.log('error fetching tweet');
             tweet_id = 'error';
         }
 
     });
 
-    console.log('tweet found!');
+
     return tweet_id;
 }
 

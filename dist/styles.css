@@ -373,6 +373,12 @@ html, body, .container {
       .comp-footer .social-links {
         padding-right: 0; } }
 
+.image-fade {
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .image-fade.loaded {
+    opacity: 1; }
+
 .comp-form .error-message {
   font-weight: bold;
   color: red; }
@@ -394,12 +400,6 @@ html, body, .container {
 
 .comp-form button {
   margin-top: 10px; }
-
-.image-fade {
-  opacity: 0;
-  transition: opacity 0.3s; }
-  .image-fade.loaded {
-    opacity: 1; }
 
 .comp-social {
   display: table-cell;
