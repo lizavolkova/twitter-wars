@@ -84,28 +84,34 @@ var findRandomTweet = function(html, userName, sinceDate) {
         var tweetDateUnix;
         var queryDate = moment(sinceDate);
         var tweetDate = moment();
-        var i = 0;
         var text = '';
 
-        var maxNumerToSearch = Math.max(numberOfTweets, 5);
-
-        while ( text === null ||  ((text !== null && text.length === 0) && (!queryDate.isSame(tweetDate, 'day')) && i <= maxNumerToSearch ) ) {
+        for (var i = 0; i < numberOfTweets; i++) {
             console.log('looking for random tweet..');
-            randomTweet = Math.floor(Math.random() * numberOfTweets) + 1;
+            console.log(numberOfTweets);
+            randomTweet = Math.floor(Math.random() * numberOfTweets);
+            console.log('randomTweet', randomTweet);
             $tweet = data.find('#stream-items-id').children().eq(randomTweet)
+
 
             $tweetParagraph = $tweet.find('.js-tweet-text-container').find('p');
             text = $tweet.find('.js-tweet-text-container').find('p').html();
-
             tweetDateUnix = $tweet.find('.stream-item-header').find('.js-short-timestamp').attr('data-time');
             tweetDate = moment.unix(tweetDateUnix);
 
-            i++;
+            tweet_id = $tweet.attr('data-item-id') || 'error';
+            console.log('tweet_id is', tweet_id);
+
+            if ( (text && text.length > 0) && (queryDate.isSame(tweetDate, 'day'))) {
+                console.log('tweet found, break out of loop!')
+                return false;
+            }
         }
 
+
         if ($tweet) {
-            console.log('tweet found!', i, maxNumerToSearch);
-            tweet_id = $tweet.attr('data-item-id');
+            console.log('tweet found!', i, numberOfTweets);
+            console.log('tweet id is', tweet_id);
         } else {
             console.log('error fetching tweet');
             tweet_id = 'error';
@@ -126,6 +132,7 @@ app.get('/getTweet', function(req, res) {
     var sinceDate = req.query.sinceDate;
     var untilDate = req.query.untilDate;
     var url = 'https://twitter.com/search?q=from%3A' + userName + '+since%3A' + sinceDate + '+until%3A' + untilDate;
+    console.log('SEARCH URL', url);
 
     request(url, function(error, response, html) {
         if (error) {
