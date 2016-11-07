@@ -93,8 +93,11 @@ export default class App extends React.Component {
     generatePermalink(ids) {
         var urlParam = ids[0] + '&' + ids[1] + '&' + this.state.sinceDate
         var encodedUrlParam = base64.encode(urlParam)
+        var permalinkUrl = 'http://' + window.location.host + '/index.html?link=' + encodedUrlParam
+        window.history.pushState({path:permalinkUrl},'',permalinkUrl)
+        
         this.setState({
-            permalink: 'http://' + window.location.host + '/index.html?link=' + encodedUrlParam
+            permalink: permalinkUrl
         })
     }
 
